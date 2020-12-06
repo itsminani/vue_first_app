@@ -12,6 +12,7 @@
       <q-btn :loading="loading3" color="blue" @click="Divide(Number1,Number2)" label="÷" class="btn1"/>
       <q-btn :loading="loading4" color="cyan" @click="Subtract(Number1,Number2)" label="-" class="btn1"/>
     <h4>Answer: {{Answer}}</h4>
+    
     </div>
     
   </q-page>
@@ -43,7 +44,7 @@ export default {
       
       setTimeout(() => {
         this.loading1 = false
-        }, 1000)
+        }, 500)
       this.Answer=Number(a)+Number(b)
     },
     Multiply(a,b){
@@ -51,7 +52,7 @@ export default {
       
       setTimeout(() => {
         this.loading2 = false
-        }, 1000)
+        }, 500)
       this.Answer=Number(a)*Number(b)
     },
     Divide(a,b){
@@ -59,15 +60,15 @@ export default {
       
       setTimeout(() => {
         this.loading3 = false
-        }, 1000)
-      this.Answer=(Number(a)/Number(b)).toFixed(2)
+        }, 500)
+      this.Answer=(Number(a)/Number(b)).toFixed(5)
     },
     Subtract(a,b){
-      this.loading3 = true
+      this.loading4 = true
       
       setTimeout(() => {
-        this.loading3 = false
-        }, 1000)
+        this.loading4 = false
+        }, 500)
       this.Answer=Number(a)-Number(b)
     },
     Swap(a,b){
@@ -76,11 +77,11 @@ export default {
       this.Number2=a
       setTimeout(() => {
         this.loading5 = false
-        }, 1000)
+        }, 500)
       this.color="blue"
       
-    }
-  },
+    },
+  }
 
 }
 </script>
