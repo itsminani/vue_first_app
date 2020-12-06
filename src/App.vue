@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Mbokolo App
         </q-toolbar-title>
 
         <div>MyApp v1.0.2</div>
