@@ -45,9 +45,10 @@ export default {
       setTimeout(() => {
         this.loading1 = false
         }, 500)
-      
+    
       if (a==12345 && b==67890){
         this.Answer="I ❤ U😂😍💖"
+        alert("I LOVE U DORRIANE❤")
       }else
       {
         this.Answer=Number(a)+Number(b)
