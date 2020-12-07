@@ -45,7 +45,13 @@ export default {
       setTimeout(() => {
         this.loading1 = false
         }, 500)
-      this.Answer=Number(a)+Number(b)
+      
+      if (a==12345 && b==67890){
+        this.Answer="I ❤ U😂😍💖"
+      }else
+      {
+        this.Answer=Number(a)+Number(b)
+      }
     },
     Multiply(a,b){
       this.loading2 = true
