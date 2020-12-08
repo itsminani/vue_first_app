@@ -12,7 +12,7 @@
       <q-btn :loading="loading3" color="blue" @click="Divide(Number1,Number2)" label="÷" class="btn1"/>
       <q-btn :loading="loading4" color="cyan" @click="Subtract(Number1,Number2)" label="-" class="btn1"/>
     <h4>Answer: {{Answer}}</h4>
-    
+    <q-btn :loading="loading6" color="green" @click="Move(Answer)" label="↑" class="btn3"/>
     </div>
     
   </q-page>
@@ -30,6 +30,7 @@ export default {
       loading3:false,
       loading4:false,
       loading5:false,
+      loading6:false,
       hold1:"First Number",
       hold2:"Second Number",
       color:"red",
@@ -88,6 +89,15 @@ export default {
       this.color="blue"
       
     },
+    Move(a){
+      this.loading6 = true
+      this.Number1=a
+      setTimeout(() => {
+        this.loading6 = false
+        }, 500)
+  
+    },
+    
   }
 
 }
